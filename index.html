@@ -461,7 +461,7 @@
 <script>
 (function () {
   // GANTI tulisan di dalam tanda kutip dengan kata sandi yang Anda inginkan
-  var KATA_SANDI = "rahasia123";
+  var KATA_SANDI = "12345678";
 
   var btn = document.getElementById("adminBtn");
   var dlg = document.getElementById("adminDlg");
@@ -498,12 +498,12 @@
       return;
     }
     if (pass.value === KATA_SANDI) {
-      setAdmin(true);
-      dlg.close();
-    } else {
-      err.textContent = "Kata sandi salah.";
-      pass.value = "";
-    }
+  setAdmin(true);
+  dlg.close();
+} else {
+  err.textContent = "Kata sandi salah.";
+  pass.value = "";
+}
   });
 })();
 </script>

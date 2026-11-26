@@ -7,6 +7,20 @@ const SKILLS = [
 /* ============ DATA PROYEK TETAP: tambahkan proyek Anda di sini ============
    skill = id keahlian di atas. image = alamat gambar (opsional), mis. "img/proyek1.jpg" */
 const PROJECTS = [
+  {
+    title: 'Website Profile Jasa MUA',
+    desc: 'Rancangan website untuk salon dan jasa makeup artist, dibuat dengan HTML,CSS DAN aplikasi VISUAL STUDIO CODE.',
+    link: 'https://github.com/anggunsidabutar.github.io/website-mua/',
+    skill: 'teknologi',
+    image: 'foto/foto projek1.png'
+  },
+  {
+    title: 'Cv-Digital',
+    desc: 'CV digital interaktif yang merangkum rekam jejak profesional, keahlian utama, serta portofolio karya saya secara terstruktur untuk memudahkan proses rekrutmen dan kolaborasi.',
+    link: 'https://github.com/anggunsidabutar.github.io/cv_digital/',
+    skill: 'teknologi',
+    image: 'foto/foto projek2.png'
+  },
 ];
 
 /* ============ MESIN HALAMAN (tidak perlu diubah) ============ */
@@ -71,7 +85,11 @@ function render() {
     const card = document.createElement('article'); card.className = 'proj';
     const th = document.createElement('div'); th.className = 'thumb'; th.style.setProperty('--c', s.color);
       if (s.color === '#6b4e71') th.style.color = '#fff';
-    if (x.image) { const im = document.createElement('img'); im.src = x.image; im.alt = 'Gambar ' + x.title; th.appendChild(im); }
+    if (x.image) {
+      const im = document.createElement('img'); im.src = x.image; im.alt = 'Gambar ' + x.title;
+      im.onerror = () => { im.remove(); th.textContent = (x.title || '?').charAt(0).toUpperCase(); };
+      th.appendChild(im);
+    }
     else { th.textContent = (x.title || '?').charAt(0).toUpperCase(); }
     const body = document.createElement('div'); body.className = 'proj-body';
     const tag = document.createElement('span'); tag.className = 'tag'; tag.style.setProperty('--c', s.color); tag.textContent = s.name;
