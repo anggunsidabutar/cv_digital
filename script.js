@@ -4,26 +4,26 @@ const SKILLS = [
   { id: 'komunikasi', name: 'Komunikasi', color: '#e9dbc6', desc: 'Berbicara didepan umum, kerja sama tim, dan komunikasi antarpribadi.' }
 ];
 
-/* ============ DATA PROYEK TETAP: tambahkan proyek Anda di sini ============
+/* ============ DATA PROYEK TETAP ============
    skill = id keahlian di atas. image = alamat gambar (opsional), mis. "img/proyek1.jpg" */
 const PROJECTS = [
   {
     title: 'Website Profile Jasa MUA',
     desc: 'Rancangan website untuk salon dan jasa makeup artist, dibuat dengan HTML,CSS DAN aplikasi VISUAL STUDIO CODE.',
-    link: 'https://github.com/anggunsidabutar.github.io/website-mua/',
+    link: 'https://anggunsidabutar.github.io/cv_digital//',
     skill: 'teknologi',
     image: 'foto/foto projek1.png'
   },
   {
     title: 'Cv-Digital',
     desc: 'CV digital interaktif yang merangkum rekam jejak profesional, keahlian utama, serta portofolio karya saya secara terstruktur untuk memudahkan proses rekrutmen dan kolaborasi.',
-    link: 'https://github.com/anggunsidabutar.github.io/cv_digital/',
+    link: 'https://anggunsidabutar.github.io/website-mua//',
     skill: 'teknologi',
     image: 'foto/foto projek2.png'
   },
 ];
 
-/* ============ MESIN HALAMAN (tidak perlu diubah) ============ */
+/* ============ MESIN HALAMAN  ============ */
 const KEY = 'cv_proyek_tambahan_v1';
 const $ = id => document.getElementById(id);
 let active = 'semua';
@@ -75,11 +75,7 @@ function render() {
   $('count').textContent = all.length + ' proyek';
 
   const wrap = $('projects'); wrap.innerHTML = '';
-  if (!all.length) {
-    const e = document.createElement('div'); e.className = 'empty';
-    e.textContent = 'Belum ada proyek di keahlian ini. Tekan "+ Tambah proyek" untuk mengisinya.';
-    wrap.appendChild(e); return;
-  }
+  if (!all.length) return;
   all.forEach(x => {
     const s = skillById(x.skill) || { name: 'Lainnya', color: '#cddbe5' };
     const card = document.createElement('article'); card.className = 'proj';
