@@ -10,14 +10,14 @@ const PROJECTS = [
   {
     title: 'Website Profile Jasa MUA',
     desc: 'Rancangan website untuk salon dan jasa makeup artist, dibuat dengan HTML,CSS DAN aplikasi VISUAL STUDIO CODE.',
-    link: 'https://anggunsidabutar.github.io/website-mua//https://,
+    link: 'https://anggunsidabutar.github.io/website-mua/',
     skill: 'teknologi',
     image: 'foto/foto projek1.png'
   },
   {
     title: 'Cv-Digital',
     desc: 'CV digital interaktif yang merangkum rekam jejak profesional, keahlian utama, serta portofolio karya saya secara terstruktur untuk memudahkan proses rekrutmen dan kolaborasi.',
-    link: 'https://anggunsidabutar.github.io/cv_digital//',
+    link: 'https://anggunsidabutar.github.io/cv_digital/',
     skill: 'teknologi',
     image: 'foto/foto projek2.png'
   },
